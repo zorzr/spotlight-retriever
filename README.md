@@ -8,9 +8,21 @@ Most of the Windows 10 users can notice that the Spotlight feature manages the l
 
 ## Usage
 
-Just double click on the `spotlight-retriever.bat` file or run it through command line.
+To use the application you need to run the `retriever.py` file from the command line:
 
-The wallpapers will be stored as JPEG images in a folder named with the current date and time.
+```
+cd retriever
+python ./retriever.py
+```
+
+The images will be stored as JPEG files in a folder named with the current date and time. Alternatively, you can customize the output folder and the image size with the following program arguments:
+
+```
+  -f name          		specifies the name of the output directory
+  -s width height  		defines the size of the images to be saved
+  --fullhd         		saves 1920x1080 and 1080x1920 images only
+  --widescreen     		saves 1920x1080 images only
+```
 
 
 
