@@ -100,10 +100,16 @@ def check_spotlight():
 		exit(2)
 
 
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_path, relative_path)
+
+
 def start():
 	ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('zorzr.spotlight')
 	app = QtWidgets.QApplication(sys.argv)
-	app.setWindowIcon(QtGui.QIcon('icon.png'))
+	app.setWindowIcon(QtGui.QIcon(resource_path('icon.png')))
 
 	check_spotlight()
 	window = RetrieverWindow()
