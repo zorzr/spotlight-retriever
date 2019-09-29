@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BaseRetrieverWindow</class>
+ <widget class="QMainWindow" name="BaseRetrieverWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>439</width>
+    <height>232</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Spotlight Retriever</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="output_box">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>411</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Output folder</string>
+    </property>
+    <widget class="QPushButton" name="select_button">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>30</y>
+       <width>61</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Select</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="folder_edit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>321</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="filters_box">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>271</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Filters</string>
+    </property>
+    <widget class="QRadioButton" name="fullhd_radio">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>231</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Full HD images</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="widescr_radio">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>201</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Widescreen images</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="custom_radio">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>131</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Custom size</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="none_radio">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>201</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>None</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="custom_width">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>100</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="width_label">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>103</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Width</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="height_label">
+     <property name="geometry">
+      <rect>
+       <x>158</x>
+       <y>105</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Height</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="custom_height">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>100</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="run_button">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>190</y>
+      <width>51</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Run</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="close_option">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>160</y>
+      <width>111</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Close when done</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="open_option">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>140</y>
+      <width>111</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Open folder</string>
+    </property>
+   </widget>
+  </widget>
+  <action name="credits_menu">
+   <property name="text">
+    <string>Credits</string>
+   </property>
+  </action>
+  <action name="exit_menu">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

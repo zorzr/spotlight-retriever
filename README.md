@@ -12,23 +12,27 @@ To use the application you need to run the `retriever.py` file from the command 
 
 ```
 cd retriever
-python ./retriever.py
+python ./main.py
 ```
 
-The images will be stored as JPEG files in a folder named with the current date and time. Alternatively, you can customize the output folder and the image size with the following program arguments:
+The above commands will start the graphical interface displaying all the available options. In alternative, you are free to use the application from the command line by adding the `--run` flag. You can also customize the program arguments as follows:
 
 ```
   -f name          		specifies the name of the output directory
   -s width height  		defines the size of the images to be saved
   --fullhd         		saves 1920x1080 and 1080x1920 images only
   --widescreen     		saves 1920x1080 images only
+  --run     			runs through command line (already done if you specify other arguments)
 ```
+
+The images will be stored as JPEG files in a folder named with the current date and time (if it isn't specified differently).
 
 
 
 ## Requirements
 
 - [Python 3](https://www.python.org)
+- [PyQt5](https://pypi.org/project/PyQt5/)
 - `get_image_size.py` from [scardine's image_size](https://github.com/scardine/image_size)
 
 It must be stored in the *retriever* folder.
