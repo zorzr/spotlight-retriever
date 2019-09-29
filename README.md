@@ -8,28 +8,38 @@ Most of the Windows 10 users can notice that the Spotlight feature manages the l
 
 ## Usage
 
-To use the application you need to run the `retriever.py` file from the command line:
+To run the application just double-click on the `Spotlight-Retriever.exe` file in the `retriever` folder. The graphical interface will be shown in a new window, where you can specify your preferences. When everything is settled, just press on the *Run* button.
 
-```
-cd retriever
-python ./main.py
-```
-
-The above commands will start the graphical interface displaying all the available options. In alternative, you are free to use the application from the command line by adding the `--run` flag. You can also customize the program arguments as follows:
+In alternative, if you have some expertise, you can execute the same functionalities from command line with the following possible arguments:
 
 ```
   -f name          		specifies the name of the output directory
   -s width height  		defines the size of the images to be saved
   --fullhd         		saves 1920x1080 and 1080x1920 images only
   --widescreen     		saves 1920x1080 images only
-  --run     			runs through command line (already done if you specify other arguments)
+  --run     			runs through command line (with default options)
 ```
+
+The `--run` flag is necessary only if you want to launch the application with default settings: by omitting it, you will launch the graphical interface instead. However, if you insert any other type of argument the program will automatically run on the command line.
 
 The images will be stored as JPEG files in a folder named with the current date and time (if it isn't specified differently).
 
 
 
+To use the application from the source code you need to run the `main.py` file from the command line:
+
+```
+cd retriever
+python ./main.py
+```
+
+
+
 ## Requirements
+
+There are no specific requirements for the released executable. Just make sure Spotlight is enabled in the lock screen Preferences.
+
+For building the code, these libraries are required:
 
 - [Python 3](https://www.python.org)
 - [PyQt5](https://pypi.org/project/PyQt5/)
