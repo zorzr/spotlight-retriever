@@ -5,18 +5,15 @@ from PyQt5 import QtWidgets, QtGui
 from base import Ui_BaseRetrieverWindow
 import retriever
 
-default_output = os.path.abspath(retriever.name)
-
 
 class RetrieverWindow(QtWidgets.QMainWindow, Ui_BaseRetrieverWindow):
 	def __init__(self, **kwargs):
 		super().__init__(**kwargs)
 		self.setupUi(self)
 		self.initUi()
-		# self.show()
 	
 	def initUi(self):
-		self.folder_edit.setText(default_output)
+		self.folder_edit.setText(os.path.abspath(retriever.name))
 		self.none_radio.setChecked(True)
 		self.close_option.setChecked(True)
 		self.open_option.setChecked(True)
@@ -70,6 +67,8 @@ class RetrieverWindow(QtWidgets.QMainWindow, Ui_BaseRetrieverWindow):
 			self.close()
 		else:
 			notify_success()
+			retriever.generate_name()
+			self.folder_edit.setText(os.path.abspath(retriever.name))
 
 
 def notify_success():

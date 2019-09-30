@@ -7,23 +7,31 @@ name = datetime.now().strftime("%Y-%m-%d %H%M%S")
 folder = os.path.expanduser('~\\AppData\\Local\\Packages\\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\\LocalState\\Assets')
 
 
+def generate_name():
+	global name
+	name = datetime.now().strftime("%Y-%m-%d %H%M%S")
+
+
 def retrieve_images():
+	files_list = []
 	for file in os.listdir(folder):
 		full_path = os.path.join(folder, file)
-		shutil.copy(full_path, name)
+		dest_path = os.path.join(name, file)
+
+		if not os.path.exists(dest_path):
+			shutil.copy(full_path, name)
+			files_list.append(dest_path)
 
 	image_list = []
-	for file in os.listdir(name):
-		full_path = os.path.join(name, file)
-		new_path = full_path + ".jpg"
-
-		image_list.append(new_path)
+	for file_path in files_list:
+		new_path = file_path + ".jpg"
 
 		if os.path.exists(new_path):
-			os.remove(full_path)
+			os.remove(file_path)
 			continue
 
-		os.rename(full_path, new_path)
+		os.rename(file_path, new_path)
+		image_list.append(new_path)
 	
 	return image_list
 
